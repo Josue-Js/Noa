@@ -1,0 +1,37 @@
+:root {
+  --color-purple-100: #9747FF;
+  --color-black-900: #070707;
+  --color-blue-750: #2D2956;
+  --color-blue-850: #1B1934;
+  --color-blue-950: #0A0913;
+  --color-white-50: #F3F3F3;
+  --color-white-500: #8B8B8B;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: var(--color-white-50);
+  background-color: var(--color-blue-950);
+  background-size: cover;
+}
+body.modalOpen {
+  overflow: hidden;
+}
+ul, a{
+  list-style: none;
+  text-decoration: none;
+  color: var(--color-white-50);
+}
+
+
+

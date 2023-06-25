@@ -1,0 +1,154 @@
+/*CONTAINER
+--------------------------*/
+.container {
+  width: 100%;
+  height: 50vw;
+  padding: 0 1.5rem;
+  max-height: 551px;
+
+  .wrapper {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .linearGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 84.55%, #0A0913 98.49%), linear-gradient(90deg, #0A0913 4.28%, rgba(0, 0, 0, 0) 50.6%);
+  }
+}
+
+
+
+/*CONTENT
+--------------------------*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 3rem;
+
+
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .wrapperOverview {
+    height: 132px;
+
+    .overview {
+      max-width: 620px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
+      font-size: 1rem;
+    }
+  }
+
+  .wrapperButton {
+    max-width: 224px;
+  }
+
+
+}
+
+
+
+/*SELECT INDEX 
+--------------------------*/
+.selectIndex {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  left: 5px;
+  bottom: 0;
+
+  .line {
+    width: 1px;
+    flex: 1;
+    background: rgba(255, 255, 255, .1);
+  }
+
+
+  .wrapperIndexs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+
+
+    .index {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      border: 1px solid var(--color-white-500);
+      cursor: pointer;
+      transition: 300ms, background, border, ease;
+
+      &.active {
+        border: 1px solid var(--color-white-50);
+      }
+
+      .fill {
+        width: 6px;
+        height: 6px;
+        background: var(--color-white-50);
+      }
+
+    }
+  }
+
+
+ 
+}
+
+
+ 
+/*WRAPPER TRAILER
+--------------------------*/
+.wrapperTrailer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,290 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
+/*BACKDROP 
+--------------------------*/
+.container .backdrop {
+  position: relative;
+  width: 100%;
+  height: 61vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #0A0913 -12.73%, rgba(0, 0, 0, 0) 24.18%, rgba(0, 0, 0, 0) 42.08%, #0A0913 100%);
+  }
+}
+
+
+
+/*CONTENT 
+--------------------------*/
+.container .content {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem 0;
+
+  .wrapperContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    order: 1;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 28px;
+
+      .rated {
+        display: flex;
+        align-items: center;
+
+        >span {
+          margin-left: 6px;
+          font-size: 0.875rem;
+          font-weight: 400;
+        }
+      }
+
+      .durationTime {
+        position: relative;
+      }
+
+      .durationTime::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        width: 6px;
+        height: 6px;
+        background: white;
+        border-radius: 50%;
+      }
+
+      .durationTime,
+      .genres,
+      .year {
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .buttons {
+    order: 2;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+  }
+
+  .overview {
+    display: flex;
+    order: 3;
+
+    >p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .cast {
+    margin-top: 2.5rem;
+
+    >h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .peoples {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      overflow-x: auto;
+    }
+
+    .viewAll {
+      flex-shrink: 0;
+      width: 70px !important;
+      height: 70px !important;
+      border: none;
+      border-radius: 50%;
+      background: var(--color-blue-850);
+      color: var(--color-white-50);
+      font-size: 1rem;
+      word-break: break-all;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.19);
+      }
+    }
+  }
+
+  .recommendation {
+    margin-top: 3.5rem;
+  }
+
+  .social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -100%);
+
+    .line {
+      display: none;
+      width: 1px;
+      height: 218px;
+      background: var(--color-white-50);
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+
+
+/*MEDIA QUERY 
+--------------------------*/
+@media screen and (min-width: 1024px) {
+
+  .container {
+    .backdrop {
+      align-items: center;
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: -1;
+
+      .gradient {
+        background: linear-gradient(180deg, rgba(10, 9, 19, 0.9) 0%, rgba(27, 25, 52, 0) 45.25%, #0A0913 82.89%);
+      }
+    }
+
+
+    .content {
+      position: initial;
+      flex: 1;
+      height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 2rem 6.25rem;
+      gap: 12rem;
+
+      .info {
+        .title {
+          font-size: 2.5rem;
+          text-align: initial;
+        }
+
+        .facts {
+          justify-content: flex-start;
+
+          .rated>span,
+          .durationTime,
+          .genres,
+          .year {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .overview {
+        order: 2;
+        margin: 1rem 0 2.125rem;
+
+        >p {
+          max-width: 650px;
+          font-size: 1.125em;
+        }
+      }
+
+      .buttons {
+        flex-direction: row;
+        order: 3;
+        max-width: 475px;
+        margin: 0;
+      }
+
+      .cast {
+        margin: 0;
+
+        >h2 {
+          font-size: 1.5rem;
+        }
+
+        .peoples {
+          flex-wrap: nowrap;
+        }
+
+      }
+
+      .social {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        right: 53px;
+        left: initial;
+
+        .line {
+          display: block;
+        }
+
+        .icons {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .recommendation {
+    display: none;
+  }
+}
