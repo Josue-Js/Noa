@@ -1,6 +1,6 @@
 # Noa
 
-> view demo []('')
+> view [demo]('https://noa-seven.vercel.app')
 
 ![Preview](/public/screenshot.png)
 
