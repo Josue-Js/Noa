@@ -34,6 +34,7 @@ export function Card({ media, active = false, ...rest }: Props) {
             alt={(mediaType === 'movie' ? media.title : media.name) as string}
             fill
             draggable={false}
+            unoptimized
           />
         </figure>
       </Link>
