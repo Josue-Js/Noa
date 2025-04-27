@@ -53,6 +53,7 @@ export default function TvShow({ tvShow }: Props) {
             src={`https://image.tmdb.org/t/p/original${tvShow?.backdrop_path}`}
             alt={tvShow.name}
             fill
+            unoptimized
           />
         </figure>
         <div className={styles.gradient} />

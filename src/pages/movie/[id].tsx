@@ -65,6 +65,7 @@ export default function Movie({ movie }: Props) {
             alt={movie.title}
             fill
             priority
+            unoptimized
           />
         </figure>
         <div className={styles.gradient} />

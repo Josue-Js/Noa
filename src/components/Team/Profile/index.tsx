@@ -32,6 +32,7 @@ export function Profile({ person, onRequestClose, setIsOpenProfile }: Props) {
             src={`https://image.tmdb.org/t/p/w300${person.profile_path}`}
             alt={person.name}
             fill
+            unoptimized
           />
         </figure>
 

@@ -34,6 +34,7 @@ export function Person({person, direction = 'column', ...rest}: Props) {
           height={70}
           src={imageSrc}
           alt={person.name}
+          unoptimized
         />
       </div>
 

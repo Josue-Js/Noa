@@ -65,6 +65,7 @@ export function CarouselDesktop({ data, currentIndex, setIndex, onOpenTrailer }:
               fill
               draggable={false}
               alt={mediaType ? media.title : media.name}
+              unoptimized
             />
           </motion.figure>
         </AnimatePresence>

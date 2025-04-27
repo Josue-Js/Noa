@@ -40,6 +40,7 @@ export function ItemSearch({ media }: Props) {
             }
             alt='red'
             fill
+            unoptimized
           />
         </Link>
 

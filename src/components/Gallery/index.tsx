@@ -79,6 +79,7 @@ export function Gallery({ isOpen, images, title, onRequestClose }: Props) {
                   width={300}
                   height={Math.floor(image.aspect_ratio) == 0 ? 450 : 210}
                   alt='poster'
+                  unoptimized
                 />
 
                 <div className={styles.display}>
